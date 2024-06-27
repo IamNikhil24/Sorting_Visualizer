@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="heading">Sorting Visualizer</h1>
+        <p class="subheading">Choose a sorting algorithm and visualize how it sorts the array.</p>
+    </header>
+    <main>
+        <div class="container">
+            <div class="controls">
+                <button class="btn" onclick="generateArray()">Generate New Array</button>
+                <div class="sort-buttons">
+                    <button class="btn" onclick="sortArray('bubble')">Bubble Sort</button>
+                    <button class="btn" onclick="insertionSort('insertion')">Insertion Sort</button>
+                    <button class="btn" onclick="selectionSort('selection')">Selection Sort</button>
+                    <button class="btn" onclick="startQuickSort('quick')">Quick Sort</button>
+                    <button class="btn" onclick="startMergeSort('merge')">Merge Sort</button>
+                </div>
+            </div>
+            <div class="array-container" id="arrayContainer">
+                <!-- Array elements will be dynamically generated here -->
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

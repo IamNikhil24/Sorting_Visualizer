@@ -1,0 +1,122 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.heading {
+    margin: 0;
+    font-size: 36px;
+}
+
+.subheading {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* Main container styles */
+.container {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Button styles */
+.btn {
+    margin: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #257a29;
+    transform: scale(1.05);
+}
+
+.sort-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+/* Array container styles */
+.array-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 50vh;
+    /* Adjusted height */
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+/* Individual bar styles */
+.bar {
+    width: 10px;
+    margin: 0 2px;
+    background-color: dodgerblue;
+    transition: height 0.3s ease-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for highlighting bars */
+@keyframes highlight {
+    from {
+        background-color: dodgerblue;
+    }
+
+    to {
+        background-color: #f0f0f0;
+    }
+}
+
+/* Animation for swapping bars */
+@keyframes swap {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Apply highlight animation */
+.bar.highlight {
+    animation: highlight 0.3s ease-in-out infinite alternate;
+}
+
+/* Apply swap animation */
+.bar.swap {
+    animation: swap 0.3s ease-in-out;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+}
